@@ -1,0 +1,268 @@
+#:kivy 1.9.0
+
+<SpecsPanel>:
+    orientation: 'vertical'
+    size_hint: .55,1
+    canvas:
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        id: title
+        font_size: 35
+        size_hint_y: .1
+        color: (0,0,0,1)
+        font_name: 'GillSans.ttc'
+        text_size: None, self.height 
+        text: 'About Melete'
+    ScrollView:
+        Label:
+            id: details
+            padding: 10,8
+            color: (0,0,0,1)
+            text_size: self.width, None
+            size_hint_y: None
+            height: self.texture_size[1]
+            font_size: 20
+            font_name: 'Geneva.dfont'
+            text: self.text
+    Label:
+        size_hint_y: .01
+        text: ''
+
+<Square>:
+    canvas:
+        Color:
+            rgba: self.color
+        Rectangle:
+            pos: self.pos
+            size: 20,20
+
+<Pictograph>:
+    orientation: 'vertical'
+    size_hint: .8,1
+    canvas:
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        id: nodes
+        font_size: 35
+        size_hint_y: .1
+        color: (0,0,0,1)
+        font_name: 'GillSans.ttc'
+        text_size: None, self.height 
+        text: 'Node Status'
+    GridLayout:
+        size_hint_y: .9
+        cols: 3
+        rows: 1
+        RelativeLayout:
+            id: freeCol
+        RelativeLayout:
+            id: blockedCol
+        RelativeLayout:
+            id: busyCol
+    GridLayout:
+        size_hint: 1,.05
+        cols: 3
+        rows: 1
+        Label:
+            text: 'free'
+            color: (0,0,0,1)
+            font_size: 18
+            font_name: 'Geneva.dfont'
+        Label:
+            text: 'blocked'
+            color: (0,0,0,1)
+            font_size: 18
+            font_name: 'Geneva.dfont'
+        Label:
+            text: 'busy'
+            color: (0,0,0,1)
+            font_size: 18
+            font_name: 'Geneva.dfont'
+    Label:
+        size_hint_y: .1
+        text: ''
+
+<Circle>:
+    id: self.id
+    canvas:
+        Color:
+            rgba: self.color
+        Ellipse:
+            pos: self.pos
+            size: self.size
+    background_normal: ''
+    background_color: 1,1,1,0
+    on_press: root.details(self.info)
+
+<BalloonRace>:
+    orientation: 'vertical'
+    size_hint: .9,1
+    canvas:
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        id: jobs
+        font_size: 35
+        size_hint_y: .1
+        height: 90
+        color: (0,0,0,1)
+        font_name: 'GillSans.ttc'
+        text_size: None, self.height
+        text: 'Jobs Status'
+    GridLayout:
+        size_hint_y: .1
+        cols: 4
+        rows: 1
+        Label:
+            id: s
+            text: '       S:'
+            color: (0,0,0,1)
+            font_size: 20
+            font_name: 'Geneva.dfont'
+            text_size: self.width, None 
+            halign: 'left'
+            Square:
+                color: (.18,.74,.08,1)
+                pos: s.x+71, s.y+11
+        Label:
+            id: t
+            text: '    T:'
+            color: (0,0,0,1)
+            font_size: 20
+            font_name: 'Geneva.dfont'
+            text_size: self.width, None 
+            halign: 'left'
+            Square:
+                color: (1,.31,.09,1)
+                pos: t.x+52, t.y+11
+        Label:
+            id: e
+            text: '  E:'
+            color: (0,0,0,1)
+            font_size: 20
+            font_name: 'Geneva.dfont'
+            text_size: self.width, None 
+            halign: 'left'
+            Square:
+                color: (0,.68,.86,1)
+                pos: e.x+37, e.y+11
+        Label:
+            id: m
+            text: 'M:'
+            color: (0,0,0,1)
+            font_size: 20
+            font_name: 'Geneva.dfont'
+            text_size: self.width, None 
+            halign: 'left'
+            Square:
+                color: (.82,.07,.25,1)
+                pos: m.x+25, m.y+11
+    GridLayout:
+        size_hint_y: .9
+        cols: 3
+        rows: 1
+        RelativeLayout:
+            id: q1
+        RelativeLayout:
+            id: q2
+        RelativeLayout:
+            id: q3
+    GridLayout:
+        size_hint: 1,.05
+        cols: 3
+        rows: 1
+        Label:
+            text: 'queue 1'
+            color: (0,0,0,1)
+            font_size: 18
+            font_name: 'Geneva.dfont'
+        Label:
+            text: 'queue 2'
+            color: (0,0,0,1)
+            font_size: 18
+            font_name: 'Geneva.dfont'
+        Label:
+            text: 'queue 3'
+            color: (0,0,0,1)
+            font_size: 18
+            font_name: 'Geneva.dfont'
+    Label:
+        size_hint_y: .1
+        text: ''
+
+<ClusterDetailsScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 8,8,8,8
+        spacing: 5
+        canvas:
+            Color:
+                rgba: 0,0,0,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:
+            size_hint_y: .15
+            canvas:
+                Color:
+                    rgba: 1, 1, 1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                id: clusterTitle
+                font_size: 65
+                font_name: 'GillSans.ttc'
+                text_size: self.width, None 
+                halign: 'left'
+                color: 0,0,0,1
+                padding: 10,10
+                text: 'Melete Cluster Usage'
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 0,0,0,0
+            spacing: 5
+            canvas:
+                Color:
+                    rgba: 0,0,0,1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            SpecsPanel:
+                id: specsPanel
+            Pictograph:
+                id: pictoPanel
+            BalloonRace:
+                id: bubblePanel
+        BoxLayout:
+            size_hint_y: .1
+            canvas:
+                Color:
+                    rgba: .98,.93,1,1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                id: banner
+                padding: 5,5
+                size: self.width, 25
+                font_size: 25
+                font_name: 'Geneva.dfont'
+                color: 0,0,0,1
+                markup: True
+                on_ref_press: root.link(args[1])
+                text: self.text
+
+    
+
