@@ -1,0 +1,147 @@
+q1:
+  01:
+    id:       12432
+    user:     ullmer
+    status:   R
+    queue:    q1
+    priority: .75
+    nodes:    25
+    time:     50
+    stem:     T
+  02:
+    id:       79345
+    user:     asiqueira
+    status:   R
+    queue:    q1
+    priority: .99
+    nodes:    20
+    time:     100
+    stem:     E
+  03:
+    id:       65793
+    user:     branton
+    status:   R
+    queue:    q1
+    priority: .62
+    nodes:    30
+    time:     75
+    stem:     M
+  04:
+    id:       12643
+    user:     pkilgore
+    status:   Q
+    queue:    q1
+    priority: .73
+    nodes:    25
+    time:     5
+    stem:     S
+  05:
+    id:       45903
+    user:     ullmer
+    status:   Q
+    queue:    q1
+    priority: .5
+    nodes:    20
+    time:     5
+    stem:     E
+  06:
+    id:       47902
+    user:     kbercan
+    status:   Q
+    queue:    q1
+    priority: .7
+    nodes:    30
+    time:     5
+    stem:     M
+q2:
+  07:
+    id:       05893
+    user:     kbercan
+    status:   R
+    queue:    q2
+    priority: .55
+    nodes:    32
+    time:     60
+    stem:     T
+  08:
+    id:       65249
+    user:     pkilgore
+    status:   R
+    queue:    q2
+    priority: .89
+    nodes:    40
+    time:     300
+    stem:     E
+  09:
+    id:       35925
+    user:     branton
+    status:   R
+    queue:    q2
+    priority: .60
+    nodes:    34
+    time:     205
+    stem:     S
+  10:
+    id:       68434
+    user:     branton
+    status:   R
+    queue:    q2
+    priority: .95
+    nodes:    47
+    time:     500
+    stem:     M
+  11:
+    id:       53421
+    user:     pkilgore
+    status:   Q
+    queue:    q2
+    priority: .97
+    nodes:    32
+    time:     5
+    stem:     T
+  12:
+    id:       12043
+    user:     kbercan
+    status:   Q
+    queue:    q2
+    priority: .75
+    nodes:    40
+    time:     5
+    stem:     E
+  13:
+    id:       92957
+    user:     ullmer
+    status:   Q
+    queue:    q2
+    priority: .74
+    nodes:    34
+    time:     5
+    stem:     S
+  14:
+    id:       96034
+    user:     kbercan
+    status:   Q
+    queue:    q2
+    priority: .82
+    nodes:    47
+    time:     5
+    stem:     S
+q3:
+  15:
+    id:       12352
+    user:     branton
+    status:   R
+    queue:    q3
+    priority: .59
+    nodes:    37
+    time:     70
+    stem:     M
+  16:
+    id:       59287
+    user:     branton
+    status:   Q
+    queue:    q3
+    priority: .75
+    nodes:    37
+    time:     5
+    stem:     T
